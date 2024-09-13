@@ -3,66 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata dan Kontak Saya</title>
+    <title>Biografi Rahmat</title>
     <style>
         body {
-            background-color: black;
+            background-image: url('https://img.freepik.com/free-vector/abstract-background-banner-colorful_677411-3768.jpg?t=st=1726104710~exp=1726108310~hmac=28c16662b4d6c44035a2fcfa2bf266c9a3489a564da3ab89255c605018d7d780&w=740');
+            background-size: cover;
             color: white;
             font-family: Arial, sans-serif;
+            position: relative;
+            
         }
-        header {
-            background: linear-gradient(to bottom, #b7cdff, #feb47b);
-            padding: 20px;
+        .container {
             text-align: center;
-        }
-        .biodata {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            margin: 20px;
             border-radius: 10px;
         }
-        .music {
-            margin: 20px 0;
+        audio {
+            margin-top: 20px;
         }
-        .game {
+        a {
+          color: lightblue;
+        }
+        .button {
+            background-color: lightblue;
+            border: none;
+            color: black;
+            padding: 15px 32px;
             text-align: center;
-            margin: 20px 0;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 10px;
+            margin: 4px 2px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px grey;
+        }
+        #dino-game {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Biodata dan Kontak Saya</h1>
-</header>
-
-<div class="biodata">
-    <h2>Nama: Rahmat Wiguna Winata</h2>
-    <p>Umur: 15 Tahun</p>
-    <p>Alamat: Bandung, Indonesia</p>
-    <p>Email: jadedmicrobe0@gmail.com</p>
-</div>
-
-<div class="music">
-    <h3>Putar Musik</h3>
-    <audio controls>
-        <source src="https://files.catbox.moe/ojnjoh.mp3" type="audio/mpeg"><p>Lagu: – Chloe Pawapua</p>
-    </audio>
-    <audio controls>
-        <source src="musik2.mp3" type="audio/mpeg">
-        Browser Anda tidak mendukung elemen audio.
-    </audio>
-</div>
-
-<div class="game">
-    <h3>Game Dino Chrome</h3>
-    <iframe src="https://chromedino.com/" width="450" height="300" frameborder="0"></iframe>
-</div>
-
-<div class="contact">
-    <h3>Kontak Saya</h3>
-    <p>Silakan hubungi saya melalui email di johndoe@example.com</p>
-</div>
-
+    <div class="container">
+        <h1>✦Halaman Biografi Saya✦</h1>
+        <p>Nama saya Rahmat Wiguna Winata. Saya Kelas IX-G. Saat ini saya sekolah SMPN 1 Cicalengka.</p>
+        <p>Saya memiliki minat dalam Program. Dalam waktu luang, saya suka dia.</p>
+        <button onclick="playMusic()">Putar Musik</button>
+        <p>Lagu – Chloe Pawapua</p>
+    </div>
+     <h2>Minigame Dino Chrome</h2>
+        <iframe id="dino-game" src="https://chromedino.com/" title="Dino Game"></iframe>
+    </div>
+<h2>Kontak Saya</h2>
+    <a href="jadedmicrobe0@gmail.com" class="button"><img src="https://files.catbox.moe/x0umro.png" width="25"><h5>Email</h5></a>
+    <a href="https://wa.me/6281944128837" class="button"><img src="https://files.catbox.moe/2thphu.png" width="25"><h5>WhatsApp</h5></a>
+    <a href="https://instagram.com/justwinzz_" class="button"><img src="https://files.catbox.moe/1vir2v.png" width="25"><h5>instagram</h5></a>
+<script>
+        function playMusic() {
+            var audio = new Audio('https://files.catbox.moe/ojnjoh.mp3');
+            audio.play();
+        }
+    </script>
 </body>
 </html>
+
